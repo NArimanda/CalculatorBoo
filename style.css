@@ -18,13 +18,6 @@ nav{
     
 }
 
-div{
-    background-color: orange;
-    display: flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    flex-grow:1;
-}
 
 button{
     margin:3px;
@@ -43,4 +36,33 @@ button{
 
 .numericalValues{
     background-color:yellow ;
+}
+
+.calculatorBody{
+    display:flex;
+    flex-direction: row-reverse;
+
+}
+
+.operatorFunctions{
+    display:flex;
+    flex-direction: column;
+}
+
+.netContainer{
+    display:flex;
+    flex-direction: column;
+    flex-grow:1;
+    
+}
+
+.netContainer >div{
+    display:flex;
+    flex-direction:row;
+
+    flex-wrap:wrap;
+}
+
+.numericalValues{
+    flex-grow:1;
 }
