@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.calculator{
+    max-width: 50%;
+}
+
+nav{
+    background-color: grey;
+    
+}
+
+div{
+    background-color: orange;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+button{
+    margin:3px;
+    flex-grow:1;
+    font-size: 5px;
+}
+
