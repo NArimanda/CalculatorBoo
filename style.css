@@ -9,6 +9,8 @@ body{
 
 .calculator{
     max-width: 50%;
+    background-color: black;
+    padding:2px;
 }
 
 nav{
@@ -19,7 +21,9 @@ nav{
 div{
     background-color: orange;
     display: flex;
+    flex-direction:row;
     flex-wrap:wrap;
+    flex-grow:1;
 }
 
 button{
@@ -28,3 +32,15 @@ button{
     font-size: 5px;
 }
 
+
+.functionalButtons{
+    background-color: turquoise;
+}
+
+.operatorFunctions{
+    background-color: brown;
+}
+
+.numericalValues{
+    background-color:yellow ;
+}
