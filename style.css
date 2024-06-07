@@ -14,7 +14,7 @@ body{
 }
 
 nav{
-    background-color: grey;
+    background-color: white;
     
 }
 
@@ -27,15 +27,15 @@ button{
 
 
 .functionalButtons{
-    background-color: turquoise;
+    background-color: red;
 }
 
 .operatorFunctions{
-    background-color: brown;
+    background-color: greenyellow;
 }
 
 .numericalValues{
-    background-color:yellow ;
+    background-color:blue;
 }
 
 .calculatorBody{

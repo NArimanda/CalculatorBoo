@@ -6,6 +6,13 @@ let NavBar= document.querySelector('nav')
 let numberButtons = document.querySelectorAll('.numericalValues > button')
 let Operators = document.querySelectorAll('.operatorFunctions >button')
 
+let ClearMemory = function(){
+    workingArray = [0];
+    display();
+    console.log(workingArray)
+}
+
+clearMemoryButton.addEventListener('click', ClearMemory)
 
 let NumberClicked = function(){
     if (isNaN(workingArray.at(-1))){
@@ -21,18 +28,33 @@ let NumberClicked = function(){
     }
     console.log(workingArray)
 
-    if(workingArray.length ==3){
-        
-        workingArray = [evaluator(workingArray)]
-    }
+    
     display()
 }
 
+let OppWatch = function(){
+    if(workingArray.length ==3){
+        workingArray = [evaluator(workingArray)];
+        display()
+        
+    }
+    else if (isNaN(workingArray.at(-1))){
+        workingArray.pop()
+    }
+    
+    workingArray.push(this.innerText)
+    if(workingArray.at(-1) == '='){
+        workingArray.pop()
+    }
+    console.log(workingArray)
+}
 
-
+for (opp of Operators){
+    opp.addEventListener('click', OppWatch)
+}
 
 for (button of numberButtons){
-    console.log('n')
+
     button.addEventListener('click', NumberClicked)
     
 }
@@ -62,7 +84,7 @@ let evaluator = function(Arr){
 }
 
 
-let addition = (a,b)=> (a+b)
+let addition = (a,b)=> (Number(a)+Number(b))
 
 let subtraction = (a,b) => (a-b)
 
